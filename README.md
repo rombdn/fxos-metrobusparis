@@ -7,7 +7,7 @@ Web Paris transports (metro & bus) route planner using the output of `ratp-gtfs-
 Demo
 -------
 
-*Work in progress...*
+http://www.rombdn.com/fxos-metrobusparis/demo2
 
 
 Licence
