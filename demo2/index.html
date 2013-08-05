@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <!-- map -->
+  <link rel="stylesheet" href="css/map.css">
+  
+  <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+	
+  <!-- fxos building blocks -->
+  <link rel="stylesheet" href="style/headers.css">
+  <link rel="stylesheet" href="style_unstable/progress_activity.css">
+  <link rel="stylesheet" href="style/input_areas.css">
+  <link rel="stylesheet" href="style/buttons.css">
+  <link rel="stylesheet" href="style/switches.css">
+	<link rel="stylesheet" href="style_unstable/drawer.css">
+  <link rel="stylesheet" href="style_unstable/lists.css">
+	<link rel="stylesheet" href="cross_browser.css">
+  <link rel="stylesheet" href="transitions.css">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="util.css">
+    <link rel="stylesheet" href="icons/styles/settings_icons.css">
+  
+  <style>
+    /*
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-size: 10px;
+      background-color: #fff;
+      height: 100%;
+      min-height: 100%;
+      max-height: 100%
+      overflow: hidden;
+      -webkit-overflow-scrolling: none;
+    }*/
+    
+
+    h2.bb-docs {
+      font-size: 1.8rem;
+      font-weight: lighter;
+      color: #777;
+      margin: -0.1rem 0 0;
+      background-color: #f5f5f5;
+      padding: 0.4rem 0.4rem 0.4rem 3rem;
+      border: solid 0.1rem #e8e8e8;
+    }
+
+    section[role="region"] {
+      height: 100%;
+      line-height: 1em;
+      font-size: 2.2rem;
+    }
+
+    div[role="main"] {
+      background: #fff;
+      height: 100%;
+    }
+
+    div[role="main"] p {
+      /*margin: 2rem 2.5rem;*/
+    }
+
+    /* Base icons */
+    section[data-type="sidebar"] > header .icon.icon-add {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4RTlFMTExOTIwMjA2ODExODIyQUJFQTc4MUU4NEEyOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENjM1MzgyMUJGNzAxMUUxQkNDOEUwRkExQ0U5N0Q0QiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENjM1MzgyMEJGNzAxMUUxQkNDOEUwRkExQ0U5N0Q0QiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Mzk0RjYxOUMzMTIwNjgxMTgyMkFBRjgxQ0IyNTAxM0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEU5RTExMTkyMDIwNjgxMTgyMkFCRUE3ODFFODRBMjkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz45ZU6fAAAAiklEQVR42mL8//8/w0AAJoYBAqMW0w2wkKmPH4hVoOw7QPyRVAMYyUzVD4FYDsq+DMR6o3E8avGoxbiykxAQ78KjTxeI2aDs70B8DY9aZ2z5HJfFIIMvUclzGkB8c9AXmU+B+CyVgvrFaJE5avGoxQNSZBICzEBsAGVfAOK/9LJ4NI5HLSYIAAIMAKfZJ7+0GO5HAAAAAElFTkSuQmCC);
+    }
+    
+    
+    
+      
+    
+    [data-position="right"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      z-index: 15;
+      z-index: 100; /* -> drawer */
+    }
+    [data-position="right"].current {
+      animation: rightToCurrent 0.4s forwards;
+      -webkit-animation: rightToCurrent 0.4s forwards;
+    }
+    [data-position="right"].right {
+      animation: currentToRight 0.4s forwards;
+      -webkit-animation: currentToRight 0.4s forwards;
+    }
+    [data-position="current"].left {
+      animation: currentToLeft 0.4s forwards;
+      -webkit-animation: currentToLeft 0.4s forwards;
+    }
+    [data-position="current"].current {
+      animation: leftToCurrent 0.4s forwards;
+      -webkit-animation: leftToCurrent 0.4s forwards;
+    }    
+    
+    
+    #headers section[role="region"] {
+      margin-bottom: 1.5rem;
+    }
+
+    #headers article section[role="region"] {
+      display: inline;
+    }
+
+    #headers section[role="region"] article header:first-child {
+      margin-top: 1.5rem;
+    }
+
+    #headers section[role="region"] header h2 {
+      margin: 0 0 1.5rem 0;
+    }
+    
+    
+    /* prevent rules inherited from drawer.css for side content */
+    section[role="region"] > header.side {
+      margin-left: 0
+    }
+    
+    section[role="region"] > header.side > a:last-of-type {
+      width: auto;
+    }
+    
+    
+    /* div main */
+    div[role="main"] {
+      style="height: 100%; 
+      box-sizing: border-box; 
+      padding-top: 1em; 
+      padding-left: 1em; 
+      padding-right: 1em;
+    }
+    
+    
+  </style>  
+  
+</head>
+<body role="application">
+
+  <div role="container" style="position: relative; overflow: hidden; width: 100%; height: 100%">
+  
+  <section data-type="sidebar">
+    <header>
+      <menu type="toolbar">
+        <a href="#"><span class="icon icon-add">add</span></a>
+      </menu>
+      <h1>Metro Bus Paris Routes<em></em></h1>
+    </header>
+    <nav>
+      <h2>External links</h2>
+      <ul>
+        <li><a href="http://github.com/rombdn/fxosmetrobusparis">Github repo</a></li>
+      </ul>
+      <ul>
+        <li><a href="http://www.rombdn.com/blog">Blog</a></li>
+      </ul>      
+    </nav>
+  </section>
+
+  <section id="drawer" role="region" data-position="current" style="background-color: #fff; overflow: scroll">
+    <header>
+      <menu type="toolbar">
+        <a href="#" id="btn-console"><span class="icon settings-icon developer">edit</span></a>
+        <!--<a id="btn-input-areas" href="#"><span class="icon icon-add">add</span></a>-->
+      </menu>
+      <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+      <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+      <h1>Metro/Bus Routes</h1>
+    </header>
+    <div id="mainload" style="padding: 2em; display: none;">
+      Loading...
+    </div>
+    <div id="main" role="main">
+    
+      <form>
+          <fieldset>
+              <legend style="font-size: 1.2rem">Start</legend>
+              <section>
+                <p>
+                  <input style="line-height: 1; font-size: 1.2rem" type="text" id="start" name="start" autocomplete="off" value="">
+                  <button id="btn-clear-start" autofocus="false" type="reset">Clear</button>
+                </p>
+              </section>
+          </fieldset>
+          <p id="p-loc-start" style="font-size: 1.2rem"><label><input style="font-size: 1.2rem" type="checkbox" data-type="switch" id="checkbox-start" style="display: none;"><span></span></label> Use my location</p>
+          
+          <fieldset>
+              <legend style="font-size: 1.2rem">End</legend>
+              <section>
+                <p>
+                  <input style="line-height: 1; font-size: 1.2rem" type="text" id="end" name="end" autocomplete="off" value="">
+                  <button id="btn-clear-end" type="reset">Clear</button>
+                </p>
+              </section>
+          </fieldset>
+          <p id="p-loc-end" style="font-size: 1.2rem"><label><input style="font-size: 1.2rem" type="checkbox" data-type="switch" id="checkbox-end" style="display: none;"><span></span></label> Use my location</p>
+          
+          <button style="margin-top: 1em;" class="recommend" id="find">Find</button>
+      </form>
+    </div>
+    
+  </section>
+  
+  
+  <!-- path result -->
+  <section id="path-results" data-position="right" style="overflow: scroll; background-color: #fff;">
+    <section role="region">
+    <header class="side">
+      <a id="btn-path-results-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Route</h1>
+    </header>
+    <div id="routeload" style="padding: 2em; display: none;">
+      Loading...
+    </div>
+    <div role="main" style="height: 90%">
+      <div style="font-size: 1.2rem" id="routeTextContainer">Hello</div>
+      <div id="map" class="map"></div>
+    </div>
+    </section>
+  </section>  
+  
+
+  
+  <!-- console -->
+  <section id="console" data-position="right" style="overflow: scroll; background-color: #fff">
+    <section role="region">
+    <header class="side">
+      <a id="btn-console-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Console</h1>
+    </header>
+    <div role="main" style="height: 90%">
+      <div id="errors"></div>
+    </div>
+    </section>
+  </section>  
+  
+  
+  <!-- metro map -->
+  <section id="input-areas" data-position="right">
+    <section role="region">
+    <header class="side">
+      <a id="btn-input-areas-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Metro map</h1>
+    </header>
+    <div id="metromapcontainer" role="main" style="height: calc(100% - 5rem); padding: 0; margin: 0">
+      <!--<div style="background-color: #a5a; width: 100%; height: 100%"></div>-->
+      <canvas id="mapcanvas" style="width: 100%; height: 100%"></canvas>
+    </div>
+    </section>
+  </section>
+  
+    
+    <!-- javascript -->
+    <script src="lib/binaryheap.js"></script>
+    
+    <script src="lib/haversine.js"></script>
+    <script src="lib/functional.js"></script>
+    <script src="lib/jquery-min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script src="js/map.js"></script>    
+    
+    <script src="js/app.js"></script>
+    <script>document.getElementById('main')</script>
+    
+    <script>
+      //navigation
+      /*document.querySelector('#btn-input-areas').addEventListener ('click', function () {
+        document.querySelector('#input-areas').className = 'current';
+      });*/
+      document.querySelector('#btn-input-areas-back').addEventListener ('click', function () {
+        document.querySelector('#input-areas').className = 'right';
+      });
+      document.querySelector('#find').addEventListener ('click', function (e) {
+        e.preventDefault();
+        document.querySelector('#path-results').className = 'current';
+      });
+      document.querySelector('#btn-path-results-back').addEventListener ('click', function () {
+        document.querySelector('#path-results').className = 'right';
+      });
+      
+       document.querySelector('#btn-console').addEventListener ('click', function () {
+        document.querySelector('#console').className = 'current';
+      });
+      document.querySelector('#btn-console-back').addEventListener ('click', function () {
+        document.querySelector('#console').className = 'right';
+      });
+      
+      
+      //$('[data-position="right"]').css('transform', 'translateX(100%)');
+      //$('[data-position="right"]').css('-webkit-transform', 'translateX(100%)');
+
+      
+    </script>
+    
+   </div>
+</body>
+</html>
