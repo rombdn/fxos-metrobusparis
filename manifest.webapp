@@ -1,0 +1,23 @@
+{
+  "name": "Metro Bus Paris Route Planning",
+  "description": "Route planning for Paris public transports",
+  "launch_path": "/",
+  "icons": {
+    "60": "/images/appicon-60.png",
+    "128": "/images/appicon-128.png"
+  },
+  "developer": {
+    "name": "Romain Beaudon",
+    "url": "http://www.rombdn.com"
+  },
+  "default_locale": "en",
+  "installs_allowed_from": [
+      "https://marketplace.firefox.com",
+      "https://www.rombdn.com"
+  ],
+  "permissions": {
+    "geolocation": {
+        "description": "Requiered for route planning from and to your position"
+    }
+  }
+}
