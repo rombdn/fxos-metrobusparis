@@ -269,6 +269,14 @@
     <script>document.getElementById('main')</script>
     
     <script>
+    
+      var canInstall = !!(navigator.mozApps && navigator.mozApps. installPackage);
+      
+      if (canInstall) { 
+        var manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp"; 
+        var installApp = navigator.mozApps.installPackage(manifestURL); 
+      }
+      
       //navigation
       /*document.querySelector('#btn-input-areas').addEventListener ('click', function () {
         document.querySelector('#input-areas').className = 'current';
