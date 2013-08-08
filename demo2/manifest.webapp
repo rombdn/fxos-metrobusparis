@@ -1,10 +1,10 @@
 {
   "name": "Metro Bus Paris Route Planning",
   "description": "Route planning for Paris public transports",
-  "launch_path": "/fxos-metrobusparis/demo2/",
+  "launch_path": "/fxos-metrobusparis/demo2",
   "icons": {
-    "60": "/fxos-metrobusparis/demo2/images/appicon-60.png",
-    "128": "/fxos-metrobusparis/demo2/images/appicon-128.png"
+    "60": "/fxos-metrobusparis/demo2/img/appicon-60.png",
+    "128": "/fxos-metrobusparis/demo2/img/appicon-128.png"
   },
   "developer": {
     "name": "Romain Beaudon",
@@ -19,5 +19,6 @@
     "geolocation": {
         "description": "Requiered for route planning from and to your position"
     }
-  }
+  },
+  "csp": "default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'"
 }
