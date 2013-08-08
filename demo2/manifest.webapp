@@ -3,8 +3,8 @@
   "description": "Route planning for Paris public transports",
   "launch_path": "/fxos-metrobusparis/demo2/",
   "icons": {
-    "60": "/images/appicon-60.png",
-    "128": "/images/appicon-128.png"
+    "60": "/fxos-metrobusparis/demo2/images/appicon-60.png",
+    "128": "/fxos-metrobusparis/demo2/images/appicon-128.png"
   },
   "developer": {
     "name": "Romain Beaudon",
