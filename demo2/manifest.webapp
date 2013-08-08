@@ -1,7 +1,7 @@
 {
   "name": "Metro Bus Paris Route Planning",
   "description": "Route planning for Paris public transports",
-  "launch_path": "/",
+  "launch_path": "/fxos-metrobusparis/demo2/",
   "icons": {
     "60": "/images/appicon-60.png",
     "128": "/images/appicon-128.png"
