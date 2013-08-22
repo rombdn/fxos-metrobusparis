@@ -3,6 +3,8 @@ fxos-metrobusparis
 
 A proof of concept webapp for Firefox OS based on the RATP Open Data (Paris Public Transports operator) and featuring a full client graph shortest path through the whole transport network (subway and bus).
 
+**TL;DR** : RATP Open Data (GTFS) -> JSON graph -> Dijkstra with Priority Queue in JS -> Firefox OS webapp
+
 ![fxos metro bus paris screenshot 1](http://www.rombdn.com/fxos-metrobusparis/images/screenshot1.png)
 ![fxos metro bus paris screenshot 2](http://www.rombdn.com/fxos-metrobusparis/images/screenshot2.png)
 
